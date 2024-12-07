@@ -1,0 +1,36 @@
+services:
+  postgres:
+    build:
+      context: ./docker/postgres
+      dockerfile: Dockerfile
+    container_name: iot_postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: iot_user
+      POSTGRES_PASSWORD: iot_password
+      POSTGRES_DB: postgres
+      POSTGRES_HOST_AUTH_METHOD: trust
+      POSTGRES_INITDB_ARGS: "--data-checksums"
+      POSTGRES_INITDB_WALDIR: "/var/lib/postgresql/wal"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - postgres_wal:/var/lib/postgresql/wal
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U iot_user"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - iot_network
+    restart: unless-stopped
+
+networks:
+  iot_network:
+    driver: bridge
+
+volumes:
+  postgres_data:
+    driver: local
+  postgres_wal:
+    driver: local 

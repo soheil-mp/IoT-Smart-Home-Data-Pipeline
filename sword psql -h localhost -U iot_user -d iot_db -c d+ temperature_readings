@@ -1,0 +1,19 @@
+                           List of relations
+ Schema |             Name              |       Type        |  Owner   
+--------+-------------------------------+-------------------+----------
+ public | humidity_readings             | partitioned table | iot_user
+ public | humidity_readings_p2024_12    | table             | iot_user
+ public | humidity_readings_p2025_01    | table             | iot_user
+ public | humidity_readings_p2025_02    | table             | iot_user
+ public | motion_events                 | partitioned table | iot_user
+ public | motion_events_p2024_12        | table             | iot_user
+ public | motion_events_p2025_01        | table             | iot_user
+ public | motion_events_p2025_02        | table             | iot_user
+ public | sensor_analytics              | table             | iot_user
+ public | sensors                       | table             | iot_user
+ public | temperature_readings          | partitioned table | iot_user
+ public | temperature_readings_p2024_12 | table             | iot_user
+ public | temperature_readings_p2025_01 | table             | iot_user
+ public | temperature_readings_p2025_02 | table             | iot_user
+(14 rows)
+
