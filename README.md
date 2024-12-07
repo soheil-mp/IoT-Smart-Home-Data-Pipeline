@@ -548,35 +548,4 @@ We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) f
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 👥 Team
-
-<table>
-  <tr>
-    <td align="center">
-      <a href="https://github.com/yourusername">
-        <img src="https://github.com/yourusername.png" width="100px;" alt=""/>
-        <br />
-        <sub><b>Your Name</b></sub>
-      </a>
-    </td>
-    <!-- Add more team members here -->
-  </tr>
-</table>
-
-## 🙏 Acknowledgments
-
-- Apache Flink Community
-- Docker Community
-- IoT Open Source Community
-- All our contributors
-
----
-
-<div align="center">
-
-**[⬆ back to top](#-iot-smart-home-data-pipeline)**
-
-Made with ❤️ by [Your Name/Team]
-
-</div>```
  
